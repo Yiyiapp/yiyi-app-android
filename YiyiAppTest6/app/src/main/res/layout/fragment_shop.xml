@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7EEFA"
+    tools:context=".views.ShopFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shopBackBtn"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:backgroundTint="#FFC4B1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="159dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif"
+        android:text="SEPETİM"
+        android:textColor="#121111"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shopBackBtn"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton13"
+        app:layout_constraintStart_toEndOf="@+id/shopBackBtn"
+        app:layout_constraintTop_toTopOf="@+id/shopBackBtn" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:backgroundTint="#E7EEFA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_restore_from_trash_24" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="270dp"
+        android:layout_height="111dp"
+        android:text="Satıcının adı soy adı ya da firma adı "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="98dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopBackBtn"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="82dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="188dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:text="Ürünün adı - adet/tabak"
+        app:layout_constraintStart_toEndOf="@+id/imageView60"
+        app:layout_constraintTop_toTopOf="@+id/imageView60" />
+
+    <TextView
+        android:id="@+id/siparisAdetTextView"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView53"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView53"
+        app:layout_constraintTop_toTopOf="@+id/textView53"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/arttirFBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:clickable="true"
+        app:backgroundTint="#5BD510"
+        app:layout_constraintEnd_toStartOf="@+id/azaltFBtn"
+        app:layout_constraintStart_toEndOf="@+id/textView53"
+        app:layout_constraintTop_toBottomOf="@+id/siparisAdetTextView"
+        app:maxImageSize="24sp"
+        app:srcCompat="@drawable/ic_baseline_remove" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/azaltFBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:backgroundTint="#5BD510"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arttirFBtn"
+        app:layout_constraintTop_toBottomOf="@+id/siparisAdetTextView"
+        app:srcCompat="@drawable/ic_baseline_forward" />
+
+    <ListView
+        android:layout_width="363dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arttirFBtn" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:text=" TOPLAM :     TL"
+        app:layout_constraintBottom_toBottomOf="@+id/sepetOnayBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sepetOnayBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/sepetOnayBtn"
+        android:layout_width="223dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/amiko"
+        android:lineSpacingExtra="36sp"
+        android:text="SEPETİ ONAYLA"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#926FBA07"
+        app:cornerRadius="@null"
+        app:iconTint="#072196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView55"
+        app:layout_constraintTop_toBottomOf="@+id/_dynamic"
+        app:layout_constraintVertical_bias="0.36"
+        app:rippleColor="#FFFFFF"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="UnknownId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

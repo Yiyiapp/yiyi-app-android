@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.HomeFragment">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/homeGeriFBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/siparisVerBtn"
+        android:layout_width="154dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/amiko"
+        android:text="SİPARİŞ VER"
+        android:textColor="#000"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintStart_toEndOf="@+id/homeGeriFBtn"
+        app:layout_constraintTop_toTopOf="@+id/homeGeriFBtn" />
+
+    <Button
+        android:id="@+id/satisYapBtn"
+        android:layout_width="154dp"
+        android:layout_height="55dp"
+        android:fontFamily="@font/amiko"
+        android:text="SATIŞ YAP"
+        android:textColor="#787878"
+        android:textStyle="bold"
+        app:backgroundTint="#DFDFDF"
+        app:layout_constraintStart_toEndOf="@+id/siparisVerBtn"
+        app:layout_constraintTop_toTopOf="@+id/siparisVerBtn" />
+
+    <FrameLayout
+        android:id="@+id/homeFramelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/siparisVerBtn">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/siparisOlusturmaSayfa1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:id="@+id/homeUserAvatarImageView"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <TextView
+                        android:id="@+id/homePageUsernameTextView"
+                        android:layout_width="260dp"
+                        android:layout_height="53dp"
+                        android:background="#0573AF"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center_horizontal"
+                        android:text="Ad Soyad"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/homeUserAvatarImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/homeUserAvatarImageView"
+                        app:layout_constraintTop_toTopOf="@+id/homeUserAvatarImageView" />
+
+                    <fragment
+                        android:id="@+id/mapView"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="0dp"
+                        android:layout_height="281dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homeUserAvatarImageView" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mapView"
+                        app:srcCompat="@drawable/ic_baseline_home_24" />
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="221dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView20"
+                        app:layout_constraintTop_toTopOf="@+id/imageView20"
+                        tools:listitem="@android:layout/list_content" />
+
+                    <Button
+                        android:id="@+id/siparisListeEkleBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F18E43"
+                        android:text="Listele"
+                        android:textColor="#000000"
+                        app:backgroundTint="#F18E43"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/listView"
+                        app:layout_constraintTop_toTopOf="@+id/listView" />
+
+
+                    <TextView
+                        android:id="@+id/homePageTextView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Satıcının Ası Soyadı - Ürünün Adı - Süre"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+                    <TextView
+                        android:id="@+id/homePageTextView02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Satıcının Ası Soyadı - Ürünün Adı - Süre"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homePageTextView01" />
+
+                    <TextView
+                        android:id="@+id/homePageTextView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Satıcının Ası Soyadı - Ürünün Adı - Süre"
+                        android:textAlignment="center"
+
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homePageTextView02" />
+
+                    <TextView
+                        android:id="@+id/homePageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Satıcının Ası Soyadı - Ürünün Adı - Süre"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homePageTextView03" />
+
+                    <TextView
+                        android:id="@+id/homePageTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Satıcının Ası Soyadı - Ürünün Adı - Süre"
+                        android:textAlignment="center"
+
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homePageTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/siparisOlusturmaSayfa2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/imageView38"
+                        android:layout_width="93dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView34"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <TextView
+                        android:id="@+id/urun4TV"
+                        android:layout_width="313dp"
+                        android:layout_height="77dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:text="Satıcının Adı Soyadı / Firma Adı - Yemeğin Adı - Yemeğin Fiyatı - Yemeğin Porsiyonu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.993"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/urun3TV" />
+
+                    <ImageView
+                        android:id="@+id/imageView39"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/urun4TV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/urun4TV"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView34"
+                        android:layout_width="93dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView32"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <TextView
+                        android:id="@+id/urun3TV"
+                        android:layout_width="313dp"
+                        android:layout_height="77dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:text="Satıcının Adı Soyadı / Firma Adı - Yemeğin Adı - Yemeğin Fiyatı - Yemeğin Porsiyonu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/urun2TV" />
+
+                    <ImageView
+                        android:id="@+id/imageView35"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/urun3TV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/urun3TV"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <ImageView
+                        android:id="@+id/imageView32"
+                        android:layout_width="93dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <TextView
+                        android:id="@+id/urun2TV"
+                        android:layout_width="313dp"
+                        android:layout_height="77dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:text="Satıcının Adı Soyadı / Firma Adı - Yemeğin Adı - Yemeğin Fiyatı - Yemeğin Porsiyonu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/urun1TV" />
+
+                    <ImageView
+                        android:id="@+id/imageView33"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/urun1TV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/urun1TV"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/homePageUsernameTextView2"
+                        android:layout_width="250dp"
+                        android:layout_height="53dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#0573AF"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center_horizontal"
+                        android:text="Ad Soyad"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView21"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="62dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton11"
+                        android:layout_width="60dp"
+                        android:layout_height="53dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        app:backgroundTint="#2F598A"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/homePageUsernameTextView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rippleColor="@color/purple_200"
+                        app:srcCompat="@drawable/ic_baseline_filter_alt_24" />
+
+                    <TextView
+                        android:id="@+id/urun1TV"
+                        android:layout_width="313dp"
+                        android:layout_height="77dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:text="Satıcının Adı Soyadı / Firma Adı - Yemeğin Adı - Yemeğin Fiyatı - Yemeğin Porsiyonu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+                    <ImageView
+                        android:id="@+id/imageView28"
+                        android:layout_width="93dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView29"
+                        android:layout_width="48dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/urun2TV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/urun2TV"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#DFDFDF"
+                        android:gravity="center_horizontal"
+                        android:text="Size en yakın konumlarda satışa çıkarılanlar :"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/homePageUsernameTextView2" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:layout_marginTop="50dp"
+                        android:background="#DFDFDF"
+                        android:gravity="center_horizontal"
+                        android:text="Seçtiğiniz kriterlere uygun 4 ürün listlenmiştir."
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.313"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView38" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/siparisOlusturmaSayfa3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="140dp"
+                        android:layout_height="88dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Malzemeler"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="199dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="..."
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="140dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="Ürün Adedi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="198dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="..."
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/imageView59"
+                        android:layout_width="139dp"
+                        android:layout_height="144dp"
+                        android:layout_marginTop="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="159dp"
+                        android:layout_height="43dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/aclonica"
+                        android:text="Özellikler"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.142"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView59" />
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="140dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Yemeğin Adı"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="198dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginLeft="20dp"
+                        android:text="..."
+                        app:layout_constraintStart_toEndOf="@+id/textView61"
+                        app:layout_constraintTop_toTopOf="@+id/textView61" />
+
+                    <Button
+                        android:id="@+id/sepeteEkleBtn"
+                        android:layout_width="333dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/amiko"
+                        android:lineSpacingExtra="36sp"
+                        android:text="SEPETE EKLE"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:backgroundTint="#926FBA07"
+                        app:cornerRadius="30dp"
+                        app:iconTint="#072196F3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19"
+                        app:rippleColor="#FFFFFF"
+                        app:strokeColor="#FFFFFF" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAD5C9"
+    tools:context=".RegisterActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/registerBackFBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="?attr/actionModeCloseDrawable" />
+
+
+    <TextView
+        android:id="@+id/KayitOlHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/artifika"
+        android:gravity="center_horizontal"
+        android:text="KAYIT OLUŞTURMA"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bireyselRegPageBtn"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight=".5"
+            android:backgroundTint="#95bcf2"
+            android:enabled="true"
+            android:fontFamily="@font/amiko"
+            android:text="BİREYSEL"
+            android:textColor="#0B0B0B"
+            android:textStyle="bold"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/kurumsapRegPageBtn"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight=".5"
+            android:backgroundTint="#95bcf2"
+            android:enabled="true"
+            android:fontFamily="@font/amiko"
+            android:text="KURUMSAL"
+            android:textColor="#0B0B0B"
+            android:textStyle="bold"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            //Kayitol Bireysel View
+
+            <LinearLayout
+                android:id="@+id/bireyselKayitView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+
+                <EditText
+                    android:id="@+id/kayitOlAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Ad"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/kayitOlSoyad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="Soyad"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/kayitOlEposta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="E-Posta"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/kayitOlTelefon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="Telefon (GSM)"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/kayitOlHes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="HES Kodu"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/kayitOlAdres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="Adres"
+                    android:inputType="textPostalAddress" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Switch
+                        android:id="@+id/radioBtnOgrenci"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".33"
+                        android:fontFamily="@font/amiko"
+                        android:text="Öğrenci"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/radioBtnEngelli"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight=".33"
+                        android:fontFamily="@font/amiko"
+                        android:text="Engelli"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/radioBtnHicbiri"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".33"
+                        android:fontFamily="@font/amiko"
+                        android:text="Hiçbiri"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/artifika"
+                    android:text="Belge yüklemek için butona tıklayınız."
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/belgeSecFBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:baselineAlignBottom="true"
+                    android:clickable="true"
+                    android:src="@android:drawable/ic_menu_upload" />
+
+                <EditText
+                    android:id="@+id/kayitOlSifre1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="Şifre"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/kayitOlSifre2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="13"
+                    android:hint="Şifre (Tekrar)"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/bireyselKayitBtn"
+                    android:layout_width="274dp"
+                    android:layout_height="81dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/amiko"
+                    android:lineSpacingExtra="36sp"
+                    android:text="KAYIT OL"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#978D8D"
+                    app:cornerRadius="30dp"
+                    android:onClick="bireyselKayitButon"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight=".5"
+                        android:text="Zaten bir hesabınız var mı?"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/burayaTiklayinTextBtn"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight=".5"
+                        android:text="Buraya tıklayınız."
+                        android:onClick="burayaTiklaTextBtn"
+                        android:textAlignment="center"
+                        android:textColor="#0861E4"
+                        android:textSize="18sp"
+                        android:clickable="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/kurumsalKayitView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Firma Adı"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Vergi Numarası"
+                    android:inputType="number" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="E-posta"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Telefon (GSM)"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Adres"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Şifre"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:ems="13"
+                    android:hint="Şifre Tekrar"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/kurumsalKayitBtn"
+                    android:layout_width="274dp"
+                    android:layout_height="81dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:lineSpacingExtra="36sp"
+                    android:text="KAYIT OL"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+

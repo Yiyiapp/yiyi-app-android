@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.menus.MenuSehirDegisFragment">
+
+    <FrameLayout
+        android:id="@+id/oncekiSiparisFirsFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                app:backgroundTint="#FFC4B1"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.024"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="Önceki Siparişler"
+                android:textColor="#130F0F"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/menuImgBtn"
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/menuImgBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#E7EEFA"
+                android:scaleType="fitStart"
+                android:tint="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oncekiSiparisFirsFrameLayout">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/oncekiSiparislerFirstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/imageButton4"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+                app:layout_constraintStart_toEndOf="@+id/imageButton8"
+                app:layout_constraintTop_toTopOf="@+id/imageButton8"
+                tools:ignore="DuplicateIds" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView121"
+                app:srcCompat="@drawable/ic_baseline_details_24" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+                app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                app:layout_constraintTop_toTopOf="@+id/imageButton4" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Değerlendir"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+                app:layout_constraintStart_toEndOf="@+id/imageButton5"
+                app:layout_constraintTop_toTopOf="@+id/imageButton5" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/imageButton5"
+                app:srcCompat="@drawable/ic_baseline_loop_24" />
+
+            <TextView
+                android:id="@+id/textView109"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton26"
+                app:layout_constraintStart_toEndOf="@+id/imageButton26"
+                app:layout_constraintTop_toTopOf="@+id/imageButton26" />
+
+            <TextView
+                android:id="@+id/textView133"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton32"
+                app:layout_constraintStart_toEndOf="@+id/imageButton32"
+                app:layout_constraintTop_toTopOf="@+id/imageButton32" />
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="76dp"
+                android:layout_height="39dp"
+                android:background="#4CAF50"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView114"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView113"
+                app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:background="#4CAF50"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView121"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView119"
+                app:layout_constraintTop_toBottomOf="@+id/textView118"
+                app:layout_constraintVertical_bias="0.481" />
+
+            <TextView
+                android:id="@+id/textView130"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="1dp"
+                android:background="#4CAF50"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView126"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView125"
+                app:layout_constraintTop_toBottomOf="@+id/textView124" />
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="32dp"
+                android:background="#FFFFFF"
+                android:text=" Satıcının adı soyadı:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="32dp"
+                android:background="#FFFFFF"
+                android:text=" Satıcının adı soyadı:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton25" />
+
+            <TextView
+                android:id="@+id/textView123"
+                android:layout_width="401dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="32dp"
+                android:background="#FFFFFF"
+                android:text=" Satıcının adı soyadı:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+            <TextView
+                android:id="@+id/textView112"
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Sipariş tarihi ve saati:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView111" />
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Sipariş tarihi ve saati:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView117" />
+
+            <TextView
+                android:id="@+id/textView124"
+                android:layout_width="392dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Sipariş tarihi ve saati:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView123" />
+
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="323dp"
+                android:layout_height="21dp"
+                android:background="#FFFFFF"
+                android:text=" Yemeğin miktarı ve adı:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="323dp"
+                android:layout_height="21dp"
+                android:background="#FFFFFF"
+                android:text=" Yemeğin miktarı ve adı:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView118" />
+
+            <TextView
+                android:id="@+id/textView125"
+                android:layout_width="323dp"
+                android:layout_height="21dp"
+                android:background="#FFFFFF"
+                android:text=" Yemeğin miktarı ve adı:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView124" />
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="323dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Toplam tutar:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView113" />
+
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="323dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Toplam tutar:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView119" />
+
+            <TextView
+                android:id="@+id/textView126"
+                android:layout_width="323dp"
+                android:layout_height="23dp"
+                android:background="#FFFFFF"
+                android:text=" Toplam tutar:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView125" />
+
+            <ImageButton
+                android:id="@+id/imageButton24"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView114"
+                app:srcCompat="@drawable/ic_baseline_details_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton30"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView126"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_baseline_details_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton25"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView115"
+                app:layout_constraintTop_toTopOf="@+id/imageButton24"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton31"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView131"
+                app:layout_constraintTop_toTopOf="@+id/imageButton30"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton26"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView116"
+                app:layout_constraintTop_toTopOf="@+id/imageButton25"
+                app:srcCompat="@drawable/ic_baseline_loop_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton32"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView132"
+                app:layout_constraintTop_toTopOf="@+id/imageButton31"
+                app:srcCompat="@drawable/ic_baseline_loop_24" />
+
+            <TextView
+                android:id="@+id/textView115"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton24"
+                app:layout_constraintStart_toEndOf="@+id/imageButton24"
+                app:layout_constraintTop_toTopOf="@+id/imageButton24" />
+
+            <TextView
+                android:id="@+id/textView131"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton30"
+                app:layout_constraintStart_toEndOf="@+id/imageButton30"
+                app:layout_constraintTop_toTopOf="@+id/imageButton30" />
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Değerlendir"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton25"
+                app:layout_constraintStart_toEndOf="@+id/imageButton25"
+                app:layout_constraintTop_toTopOf="@+id/imageButton25"
+                app:layout_constraintVertical_bias="0.334" />
+
+            <TextView
+                android:id="@+id/textView132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Değerlendir"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton31"
+                app:layout_constraintStart_toEndOf="@+id/imageButton31"
+                app:layout_constraintTop_toTopOf="@+id/imageButton31" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/oncekiSiparisSiparisTekrarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView301"
+                android:layout_width="404dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="50dp"
+                android:background="#FFFFFF"
+                android:text=" Satıcının adı soyadı:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView302"
+                android:layout_width="412dp"
+                android:layout_height="31dp"
+                android:background="#FFFFFF"
+                android:text=" Sipariş tarihi ve saati:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView301" />
+
+            <TextView
+                android:id="@+id/textView303"
+                android:layout_width="299dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:text=" Yemeğin miktarı ve adı:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView302" />
+
+            <TextView
+                android:id="@+id/textView304"
+                android:layout_width="300dp"
+                android:layout_height="37dp"
+                android:background="#FFFFFF"
+                android:text=" Toplam tutar:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView303" />
+
+            <TextView
+                android:id="@+id/textView305"
+                android:layout_width="107dp"
+                android:layout_height="75dp"
+                android:background="#4CAF50"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView303"
+                app:layout_constraintTop_toBottomOf="@+id/textView302" />
+
+            <ImageButton
+                android:id="@+id/imageButton306"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView304"
+                app:srcCompat="@drawable/ic_baseline_details_24" />
+
+            <TextView
+                android:id="@+id/textView307"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton306"
+                app:layout_constraintStart_toEndOf="@+id/imageButton306"
+                app:layout_constraintTop_toTopOf="@+id/imageButton306" />
+
+            <ImageButton
+                android:id="@+id/imageButton308"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView307"
+                app:layout_constraintTop_toTopOf="@+id/imageButton306"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_24" />
+
+            <TextView
+                android:id="@+id/textView309"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Değerlendir"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton308"
+                app:layout_constraintStart_toEndOf="@+id/imageButton308"
+                app:layout_constraintTop_toTopOf="@+id/imageButton308" />
+
+            <ImageButton
+                android:id="@+id/imageButton310"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView309"
+                app:layout_constraintTop_toTopOf="@+id/imageButton308"
+                app:srcCompat="@drawable/ic_baseline_loop_24" />
+
+            <TextView
+                android:id="@+id/textView311"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton310"
+                app:layout_constraintStart_toEndOf="@+id/imageButton310"
+                app:layout_constraintTop_toTopOf="@+id/imageButton310" />
+
+            <TextView
+                android:id="@+id/textView97"
+                android:layout_width="350dp"
+                android:layout_height="108dp"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Siparişiniz hala yayında!  Tekrar etmek istediğinizden emin misiniz?"
+                android:textAlignment="center"
+                android:textColor="#0573AF"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton308" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="91dp"
+                android:layout_height="51dp"
+                android:backgroundTint="#FFC4B1"
+                android:text="Evet"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="@+id/button3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FFC4B1"
+                android:text="Hayır"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.253"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView97"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/oncekiSiparislerSiparisTekrarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView312"
+                android:layout_width="349dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Siparişinizi Değerlendiriniz"
+                android:textAlignment="center"
+                android:textColor="#0573AF"
+                android:textSize="27sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton308" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="247dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:foregroundTint="#FFFFFF"
+                android:indeterminateTint="#0FFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView312"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView301"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="50dp"
+                android:background="#FFFFFF"
+                android:text=" Satıcının adı soyadı:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView302"
+                android:layout_width="0dp"
+                android:layout_height="31dp"
+                android:background="#FFFFFF"
+                android:text=" Sipariş tarihi ve saati:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView301"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView303"
+                android:layout_width="299dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:text=" Yemeğin miktarı ve adı:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView302"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView304"
+                android:layout_width="300dp"
+                android:layout_height="37dp"
+                android:background="#FFFFFF"
+                android:text=" Toplam tutar:"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView305"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView303"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView305"
+                android:layout_width="107dp"
+                android:layout_height="75dp"
+                android:background="#4CAF50"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView304"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView303"
+                app:layout_constraintTop_toBottomOf="@+id/textView302"
+                tools:ignore="DuplicateIds" />
+
+            <ImageButton
+                android:id="@+id/imageButton306"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView304"
+                app:srcCompat="@drawable/ic_baseline_details_24"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView307"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton306"
+                app:layout_constraintStart_toEndOf="@+id/imageButton306"
+                app:layout_constraintTop_toTopOf="@+id/imageButton306"
+                tools:ignore="DuplicateIds" />
+
+            <ImageButton
+                android:id="@+id/imageButton308"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView307"
+                app:layout_constraintTop_toTopOf="@+id/imageButton306"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_24"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView309"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Değerlendir"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton308"
+                app:layout_constraintStart_toEndOf="@+id/imageButton308"
+                app:layout_constraintTop_toTopOf="@+id/imageButton308"
+                tools:ignore="DuplicateIds" />
+
+            <ImageButton
+                android:id="@+id/imageButton310"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#E7EEFA"
+                app:layout_constraintStart_toEndOf="@+id/textView309"
+                app:layout_constraintTop_toTopOf="@+id/imageButton308"
+                app:srcCompat="@drawable/ic_baseline_loop_24"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/textView311"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tekrar"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton310"
+                app:layout_constraintStart_toEndOf="@+id/imageButton310"
+                app:layout_constraintTop_toTopOf="@+id/imageButton310"
+                tools:ignore="DuplicateIds" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
